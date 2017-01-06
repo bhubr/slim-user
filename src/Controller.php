@@ -21,13 +21,11 @@ class Controller
     public function __construct(
         Guard $csrf,
         Twig $view,
-        LoggerInterface $logger,
-        Builder $table
+        LoggerInterface $logger
     ) {
         $this->csrf = $csrf;
         $this->view = $view;
         $this->logger = $logger;
-        $this->table = $table;
 
         $this->csrfNameKey = $this->csrf->getTokenNameKey();
         $this->csrfValueKey = $this->csrf->getTokenValueKey();
